@@ -1,0 +1,312 @@
+/*===============*/
+/* General Styles*/
+/*===============*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+ul, nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    opacity: 0.75;
+    color: rgb(8, 8, 8);
+}
+
+a:hover {
+    opacity: 1;
+}
+
+a.btn {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    background-color: #07af31;
+    opacity: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans" , sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
+}
+
+/*==============*/
+/* Header Styles*/
+/*==============*/
+
+header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 100px 0;
+    animation: 3s fadein 0.5s forwards;
+    opacity: 0;
+    color: rgb(7, 7, 7);
+    z-index: 1;
+    background-color: #df7466;
+}
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+header h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+header nav {
+    display: flex;
+    margin-right: -15px;
+}
+
+header nav li {
+    margin: 0 15px;
+}
+
+@media (max-width: 800px) {
+    header {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+
+    header h2 {
+        margin-bottom: 15px;
+    }
+}
+
+/*=============*/
+/* Title Styles*/
+/*=============*/
+
+.title {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: rgb(8, 8, 8);
+}
+
+.title {
+    background-image: url(img/titlepic2.jpg);
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background-color: #090c0f;
+}
+
+.title h1 {
+    font: bold 60px 'Open Sans', sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+    
+    
+}
+
+.title h3 {
+    font: normal 28px 'Open Sans', sans-serif;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.title .title-content-area {
+    opacity: 0;
+    margin-top: 100%;
+    animation: 2s slidefade 1s forwards;
+    margin-left: 50%;
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .title {
+        font-size: 48px;
+    }
+
+    .title h1 {
+        font-size: 48px; 
+    }
+
+    .title h3 {
+        font-size: 24px;
+    }
+}
+
+/*===========*/
+/* Bio Styles*/
+/*===========*/
+
+.bio .bio-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ 
+    
+}
+
+.bio .bio-title {
+    margin-left: 20px;
+}
+
+ .bio-content img {
+     height: 400px;
+     width: 300px;
+ }
+
+
+
+
+
+
+/*===============*/
+/* Foodies Styles*/
+/*===============*/
+
+.foodies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: baseline;
+    background-color: #f1e8e8;
+    
+}
+
+.foodie-title {
+    text-align: center;
+}
+
+.recipe-card  img{
+    
+    width: 290px;
+    height: 220px;
+    
+}
+
+.recipe-card {
+    border: solid black 2px;
+    border-radius: 10px;
+    padding: 5px;
+    max-width: 300px;
+    background-color: white;
+}
+
+@media (max-width: 1100px) {
+    .foodies .recipe-card {
+        flex-basis: 50%;
+    }
+}
+
+@media (max-width: 800px) {
+    .foodies .recipe-card {
+        flex-basis: 100%;
+    }
+}
+
+
+
+
+
+
+/*===============*/
+/* Footer Section*/
+/*===============*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #df7466;
+    color: #f5f5f5;
+    padding: 20px 0;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer ul li {
+    margin-left: 16px;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+    align-self: center;
+}
+
+@media (max-width: 1100px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer p {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    footer ul li {
+        margin: 0 8px;
+    }
+}
